@@ -29,7 +29,7 @@ public class main
 		System.out.println("Hello World!");
 		circle my_circle = new circle(1.0);
 
-		int count = (int)Math.pow(10.0,6.0);
+		int count = (int)Math.pow(10.0,7.0);
 		int sum = 0;
 		int i;
 
