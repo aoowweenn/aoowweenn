@@ -15,8 +15,14 @@
 
     <target name="test">
 		<mkdir dir="build"/>
+        <mkdir dir="build/jar"/>
 		<javac srcdir="." destdir="build"/>
-        <java jar="build/HelloWorld.jar" fork="true"/>
+        <jar destfile="build/jar/HelloWorld.jar" basedir="build">
+            <manifest>
+                <attribute name="Main-Class" value="main"/>
+            </manifest>
+		</jar>
+        <java jar="build/jar/HelloWorld.jar" fork="true"/>
     </target>
 
 </project>
