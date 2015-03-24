@@ -4,11 +4,6 @@
         <delete dir="build"/>
     </target>
 
-    <target name="compile">
-        <mkdir dir="build/classes"/>
-        <javac srcdir="." destdir="build/classes"/>
-    </target>
-
     <target name="jar">
         <mkdir dir="build/jar"/>
         <jar destfile="build/jar/HelloWorld.jar" basedir="build/classes">
@@ -19,7 +14,9 @@
     </target>
 
     <target name="test">
-        <java jar="build/jar/HelloWorld.jar" fork="true"/>
+		<mkdir dir="build"/>
+		<javac srcdir="." destdir="build"/>
+        <java jar="build/HelloWorld.jar" fork="true"/>
     </target>
 
 </project>
